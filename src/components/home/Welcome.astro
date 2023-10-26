@@ -6,7 +6,7 @@
     <div class=" bg-[#f6f186] gap-5 grid grid-cols-1 md:grid-cols-2 " >
         <div></div>
         <div class="relative flex-justify-center items-center">
-        <div class="absolute left-1/4 bottom-1/4 w-20 h-20 flex justify-center items-center rounded-full bg-white z-10 cursor-pointer" x-on:click="playvideo()">
+        <div id="playButton" class="absolute left-1/4 bottom-1/4 w-20 h-20 flex justify-center items-center rounded-full bg-white z-10 cursor-pointer" x-on:click="playvideo()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.736 4 21.276 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648l12.812 6.968Z"/></svg>
         </div>
             <video
@@ -31,5 +31,7 @@
     });
     function playvideo(){
         player.play()
+        document.getElementById('playButton').style.display = 'none';
+
     }
 </script>
