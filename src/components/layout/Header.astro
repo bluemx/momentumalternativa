@@ -20,6 +20,11 @@ const links = [
     name: 'IMPACTA',
     href: '/impacta',
   },
+  {
+    ref: '05',
+    name: 'CONTACTO',
+    href: '/contact',
+  },
 ];
 ---
 
@@ -37,7 +42,6 @@ const links = [
         href="/"
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
-        <span class="sr-only">Stone</span>
         <img
           class="h-24 w-auto"
           width="320"
@@ -96,7 +100,7 @@ const links = [
         aria-expanded="false"
         :aria-expanded="open.toString()"
       >
-        <span class="sr-only">Toggle menu</span>
+        <span class="sr-only">Menu</span>
         <svg
           x-cloak
           class="h-8 w-8"
@@ -151,12 +155,11 @@ const links = [
           links.map((link) => (
             <a
               href={link.href}
-              class="text-primary-950 dark:text-primary-200 group inline-flex py-6 text-3xl font-bold tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
+              class="text-primary-950 dark:text-primary-200 group inline-flex py-4 text-3xl font-bold tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
             >
               <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
-                <div class="flex items-center gap-6">
-                  <span class="text-xs">{link.ref}</span>
-                  <span class="group-hover:underline">{link.name}</span>
+                <div class="flex items-center gap-3">
+                  <span class="group-hover:underline font-display text-dark dark:text-white">{link.name}</span>
                 </div>
                 <svg
                   class="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8"
