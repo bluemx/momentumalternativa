@@ -8,7 +8,8 @@ const services = [
       'Cursos y rutas de aprendizaje para desarrollar una mentalidad y competencias de agente de cambio.',
     bg: 'bgaprende.webp',
     anim: '3daprende.splinecode',
-    img: 'ti-aprende.webp'
+    img: 'ti-aprende.webp',
+    page: '/aprende'
   },
   {
     step: '02',
@@ -17,7 +18,8 @@ const services = [
       'Interactua en comunidades con otros agentes de cambio, compartir ideas y conectar con mentores.',
       bg: 'bgconecta.webp',
       anim: '3dconecta.splinecode',
-    img: 'ti-conecta.webp'
+    img: 'ti-conecta.webp',
+    page: '/conecta'
   },
   {
     step: '03',
@@ -26,7 +28,8 @@ const services = [
       'Las herramientas esenciales para planear y medir el impacto de tus proyectos.',
       bg: 'bgimpacta.webp',
       anim: '3dimpacta.splinecode',
-    img: 'ti-impacta.webp'
+    img: 'ti-impacta.webp',
+    page: '/impacta'
   },
 ];
 ---
@@ -42,7 +45,7 @@ const services = [
           services.map((service, index) => (
 
             <div class=" flex flex-col gap-12 shadow-xl bg-cover" data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="1000" style={`background-image: url(assets/${service.bg});`} class:list={[index==1 && 'md:mt-48', index==2 && 'md:mt-96']} >
-              <div class="flex flex-col gap-4 py-20" >
+              <a href={service.page} class="flex flex-col gap-4 py-20" >
                 <!-- <h3 class="text-5xl font-display font-bold dark:text-primary-500">{service.name}</h3> -->
                 <!--
                   <div class="-mt-20"><Scene3D anim={service.anim}></Scene3D></div>
@@ -51,7 +54,7 @@ const services = [
                 <div class="text-dark font-bold dark:text-primary-800/70 text-base sm:text-xl px-4  text-center">
                   {service.description}
                 </div>
-              </div>
+              </a>
             </div>
           ))
         }
