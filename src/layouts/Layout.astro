@@ -46,6 +46,7 @@ const { description, title } = Astro.props;
         display: none !important;
       }
     </style>
+    
     <script>
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
@@ -79,9 +80,9 @@ const { description, title } = Astro.props;
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script is:inline>
       AOS.init();
+
     </script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script is:inline src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
     <script type="module" src="./assets/opentype.js"></script>
     <script type="module" src="./assets/spline.js"></script>
   </body>

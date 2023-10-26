@@ -25,12 +25,43 @@ import Scene3D from "../inner/scene3d.astro";
         </div>
     </div>
 </div>
-<script is:inline src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+<!--
+    <script is:inline src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+
+ -->
 <script is:inline>
-    const player = videojs('wvideo', {
-        fluid: true,
-        aspectRatio: '1:1'
-    });
+    
+    if (typeof videojs === 'undefined') {
+    var player;
+    var script = document.createElement('script');
+    script.src = 'https://vjs.zencdn.net/8.6.1/video.min.js';
+    script.type = 'text/javascript';
+
+    script.onload = function() {
+        console.log("Script loaded successfully.");
+        // You can initialize your videojs player here
+        startVideoPlayer()
+    };
+
+    script.onerror = function() {
+        console.error("There was an issue loading the script.");
+    };
+
+    document.head.appendChild(script);
+} else {
+    console.log("videojs already exists.");
+}
+    
+
+    function startVideoPlayer () {
+        player = videojs('wvideo', {
+            fluid: true,
+            aspectRatio: '1:1'
+        });
+    }
+
+
+
     function playvideo(){
         player.play()
         document.getElementById('playButton').style.display = 'none';
