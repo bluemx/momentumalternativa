@@ -1,0 +1,51 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'APRENDE',
+    description:
+      'Cursos y rutas de aprendizaje para desarrollar una mentalidad y competencias de agente de cambio.',
+    bg: 'bgaprende.webp'
+  },
+  {
+    step: '02',
+    name: 'CONECTA',
+    description:
+      'Interactua en comunidades con otros agentes de cambio, compartir ideas y conectar con mentores.',
+      bg: 'bgconecta.webp'
+  },
+  {
+    step: '03',
+    name: 'IMPACTA',
+    description:
+      'Las herramientas esenciales para planear y medir el impacto de tus proyectos.',
+      bg: 'bgimpacta.webp'
+  },
+];
+---
+
+<section class="pt-5 pb-16 sm:pb-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <p>
+        <strong class="text-main">MOMENTUM ALTERNATIVA</strong> cuenta con 3 ejes estratégicos que potenciarán la activación de agentes de cambio, la colaboración entre personas de diversas comunidades, ideas y mentores, así como las herramientas y los recursos para llevar al cambio a la acción.
+      </p>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+
+            <div class=" flex flex-col gap-12  px-6 py-8 bg-cover" data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="500" style={`background-image: url(assets/${service.bg});`} >
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-5xl font-display font-bold dark:text-primary-500">{service.name}</h3>
+                <p class="text-primary-950/70 dark:text-primary-800/70 text-base sm:text-lg">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
