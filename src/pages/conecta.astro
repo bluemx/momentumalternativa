@@ -1,0 +1,72 @@
+---
+import Heading from '../components/inner/Heading.astro';
+import Mission from '../components/about/Mission.astro';
+import Team from '../components/about/Team.astro';
+import Values from '../components/about/Values.astro';
+import Layout from '../layouts/Layout.astro';
+import Courses from '../components/inner/Courses.astro';
+const title = 'APRENDE'
+const description = 'Cursos y rutas de aprendizaje para desarrollar una mentalidad y competencias de agente de cambio.'
+const courses = [
+{
+    ref: '0024',
+    name: 'Derecho digital',
+    description: 'Entiende las leyes en la era digital. Explora cómo el derecho se aplica en el mundo digital, desde la propiedad intelectual hasta la privacidad en línea.',
+    img: 'a1.webp'
+  },
+  {
+    ref: '0025',
+    name: 'Artes IA',
+    description: 'Crea arte con inteligencia artificial. Utiliza algoritmos y aprendizaje automático para generar creaciones artísticas únicas e innovadoras.',
+    img: 'a2.webp'
+  },
+  {
+    ref: '0026',
+    name: 'Filosofía virtualizada',
+    description: 'Analiza la filosofía en el mundo digital. Reflexiona sobre los dilemas éticos y morales que surgen en el entorno virtual y cómo afectan a nuestra sociedad.',
+    img: 'a3.webp'
+  },
+  {
+    ref: '0027',
+    name: 'Gastronomía sustentable',
+    description: 'Cocina de manera amigable con el ambiente. Aprende sobre ingredientes sostenibles, técnicas de cocina respetuosas con el medio ambiente y cómo minimizar el desperdicio de alimentos.',
+    img: 'a4.webp'
+  },
+  {
+    ref: '0028',
+    name: 'Infraestructura nacional',
+    description: 'Descubre la infraestructura de tu país. Aprende sobre los sistemas de transporte, servicios públicos y cómo se planifica y mantiene la infraestructura a nivel nacional.',
+    img: 'a5.webp'
+  },
+  {
+    ref: '0029',
+    name: 'Docencia en línea',
+    description: 'Aprende a enseñar desde cualquier lugar. Descubre las mejores prácticas para la enseñanza en línea, cómo mantener a los estudiantes comprometidos y cómo utilizar la tecnología para mejorar la educación.',
+    img: 'a6.webp'
+  },
+  {
+    ref: '0030',
+    name: 'Mantenimiento estructural',
+    description: 'Aprende a mantener estructuras seguras. Conoce los principios de la ingeniería estructural y cómo inspeccionar y mantener edificios y otras estructuras para garantizar su seguridad y durabilidad.',
+    img: 'a7.webp'
+  },
+  {
+    ref: '0031',
+    name: 'Modelos ML para arquitectura',
+    description: 'Aplica ML en proyectos arquitectónicos. Aprende a utilizar el aprendizaje automático para optimizar el diseño arquitectónico, desde la planificación del espacio hasta la selección de materiales.',
+    img: 'a8.webp'
+  }
+]
+---
+
+<Layout description={description} title={title}>
+<Heading description={description} title={title} />
+<Courses courses={courses} />
+<!--
+  <Mission />
+   -->
+   <!--
+    
+  <Team />
+   -->
+</Layout>
