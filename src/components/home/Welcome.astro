@@ -1,0 +1,35 @@
+---
+
+---
+<div>
+
+    <div class=" bg-[#f6f186] gap-5 grid grid-cols-1 md:grid-cols-2 " >
+        <div></div>
+        <div class="relative flex-justify-center items-center">
+        <div class="absolute left-1/4 bottom-1/4 w-20 h-20 flex justify-center items-center rounded-full bg-white z-10 cursor-pointer" x-on:click="playvideo()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.736 4 21.276 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648l12.812 6.968Z"/></svg>
+        </div>
+            <video
+    id="wvideo"
+    class="video-js w-full aspect-square bg-[#f6f186]"
+    preload="auto"
+    width="420"
+    height="420"
+    poster="assets/bien-poster.webp"
+    data-setup="{}"
+  >
+    <source src="assets/bien-web.mp4" type="video/mp4" />
+  </video>
+        </div>
+    </div>
+</div>
+<script is:inline src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+<script is:inline>
+    const player = videojs('wvideo', {
+        fluid: true,
+        aspectRatio: '1:1'
+    });
+    function playvideo(){
+        player.play()
+    }
+</script>

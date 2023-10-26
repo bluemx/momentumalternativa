@@ -18,7 +18,8 @@ module.exports = {
       primary: colors.slate,
       secondary: '#E1A93B',
       accent: '#F6F077',
-      main: '#E1A93B'
+      main: '#E1A93B',
+      dark: '#496372'
     },
     fontFamily: {
       sans: ['Hind', 'sans-serif'],

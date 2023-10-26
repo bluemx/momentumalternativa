@@ -31,21 +31,20 @@ const services = [
 <section class="pt-5 pb-16 sm:pb-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-12 sm:gap-16">
-      <p>
-        <strong class="text-main">MOMENTUM ALTERNATIVA</strong> cuenta con 3 ejes estratégicos que potenciarán la activación de agentes de cambio, la colaboración entre personas de diversas comunidades, ideas y mentores, así como las herramientas y los recursos para llevar al cambio a la acción.
-      </p>
-      <div class="grid gap-8 lg:grid-cols-3">
+      <div class="text-center text-xl max-w-2xl mx-auto">
+        <strong class="text-main ">MOMENTUM ALTERNATIVA</strong> cuenta con 3 ejes estratégicos que potenciarán la activación de agentes de cambio, la colaboración entre personas de diversas comunidades, ideas y mentores, así como las herramientas y los recursos para llevar al cambio a la acción.
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3 items-center">
         {
-          services.map((service) => (
+          services.map((service, index) => (
 
-            <div class=" flex flex-col gap-12  px-6 py-8 bg-cover" data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="500" style={`background-image: url(assets/${service.bg});`} >
-              <p class="text-sm">{service.step}</p>
-              <div class="flex flex-col gap-4">
-                <h3 class="text-5xl font-display font-bold dark:text-primary-500">{service.name}</h3>
-                <Scene3D anim={service.anim}></Scene3D>
-                <p class="text-primary-950/70 dark:text-primary-800/70 text-base sm:text-lg">
+            <div class=" flex flex-col gap-12 shadow-xl bg-cover" data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="1000" style={`background-image: url(assets/${service.bg});`} class:list={[index==1 && 'md:mt-48', index==2 && 'md:mt-96']} >
+              <div class="flex flex-col gap-4 py-20" >
+                <!-- <h3 class="text-5xl font-display font-bold dark:text-primary-500">{service.name}</h3> -->
+                <div class="-mt-20"><Scene3D anim={service.anim}></Scene3D></div>
+                <div class="text-dark font-bold dark:text-primary-800/70 text-base sm:text-xl px-4  text-center">
                   {service.description}
-                </p>
+                </div>
               </div>
             </div>
           ))
