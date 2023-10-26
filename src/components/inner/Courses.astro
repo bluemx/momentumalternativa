@@ -1,0 +1,33 @@
+---
+interface Props {
+    courses: Object;
+}
+const {courses} = Astro.props;
+---
+
+
+<div class="grid gap-8 lg:grid-cols-2 max-w-4xl mx-auto">
+    {
+      courses.map((item, index) => (
+        <div class:list={['space-y-8', index % 2 === 0 && 'lg:mt-16']}>
+
+
+            <div data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="1000" class="relative aspect-square bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 px-6 py-8 overflow-hidden">
+              <div class="relative z-10">
+                <p class="text-base">{item.ref}</p>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-6xl font-display font-bold">{item.name}</h3>
+                    <div class=" -mx-3.5 bg-accent p-1 text-primary-950/70 dark:text-primary-200/70 text-base md:text-lg">
+                    {item.description}
+                    </div>
+                </div>
+                
+                </div>
+              <div class="absolute aspect-square inset-0 z-0 bg-cover opacity-20" style={`background-image:url(assets/curso/${item.img});`}></div>
+            </div>
+
+
+        </div>
+      ))
+    }
+  </div>

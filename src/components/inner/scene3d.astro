@@ -1,0 +1,10 @@
+---
+interface Props{
+    anim: string;
+}
+const { anim } = Astro.props;
+
+
+---
+
+<spline-viewer class="aspect-square" url={`assets/${anim}`} ></spline-viewer>

@@ -1,25 +1,29 @@
 ---
+import Scene3D from "../inner/scene3d.astro";
 const services = [
   {
     step: '01',
     name: 'APRENDE',
     description:
       'Cursos y rutas de aprendizaje para desarrollar una mentalidad y competencias de agente de cambio.',
-    bg: 'bgaprende.webp'
+    bg: 'bgaprende.webp',
+    anim: '3daprende.splinecode'
   },
   {
     step: '02',
     name: 'CONECTA',
     description:
       'Interactua en comunidades con otros agentes de cambio, compartir ideas y conectar con mentores.',
-      bg: 'bgconecta.webp'
+      bg: 'bgconecta.webp',
+      anim: '3dconecta.splinecode'
   },
   {
     step: '03',
     name: 'IMPACTA',
     description:
       'Las herramientas esenciales para planear y medir el impacto de tus proyectos.',
-      bg: 'bgimpacta.webp'
+      bg: 'bgimpacta.webp',
+      anim: '3dimpacta.splinecode'
   },
 ];
 ---
@@ -38,6 +42,7 @@ const services = [
               <p class="text-sm">{service.step}</p>
               <div class="flex flex-col gap-4">
                 <h3 class="text-5xl font-display font-bold dark:text-primary-500">{service.name}</h3>
+                <Scene3D anim={service.anim}></Scene3D>
                 <p class="text-primary-950/70 dark:text-primary-800/70 text-base sm:text-lg">
                   {service.description}
                 </p>
