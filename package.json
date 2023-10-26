@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "postbuild": "node ./postbuild.mjs -path https://digitalfamily.mx/momentumv1/"
+    "astro": "astro"
   },
   "dependencies": {
     "@alpinejs/collapse": "3.12.3",
